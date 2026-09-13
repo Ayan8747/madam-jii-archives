@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-serif: "Cinzel", serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-display: "Space Grotesk", "Syne", sans-serif;
+
+  --color-archive-black: #08080a;
+  --color-archive-gray: #121215;
+  --color-archive-lighter: #1a1a1f;
+  --color-archive-text: #f2ede4;
+  --color-archive-text-dim: #a19d94;
+
+  --color-accent-amber: #d4a373;
+  --color-accent-peach: #e2b49a;
+  --color-accent-warm: #bc6c25;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-archive-black);
+    color: var(--color-archive-text);
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(212, 163, 115, 0.4);
+  }
+
+  .text-glow-strong {
+    text-shadow: 0 0 30px rgba(226, 180, 154, 0.6), 0 0 10px rgba(226, 180, 154, 0.8);
+  }
+
+  .glass-panel {
+    background: rgba(18, 18, 20, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
